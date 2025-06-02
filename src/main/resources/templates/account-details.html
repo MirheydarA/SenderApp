@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Account Details</title></head>
+<body>
+<h2>Your Account</h2>
+
+<p>Fullname: <span th:text="${account.getUser().getName() + ' ' + account.getUser().getSurname()}"></span></p>
+<p>Birthdate: <span th:text="${account.getBirthDate()}"></span></p>
+<p>Balance: <span th:text="${account.getBalance()}"></span></p>
+<p>Currency: <span th:text="${account.getCurrency()}"></span></p>
+
+<a href="/logout">Logout</a>
+
+</body>
+</html>

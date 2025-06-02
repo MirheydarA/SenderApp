@@ -1,0 +1,30 @@
+<!-- src/main/resources/templates/account-create.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Account</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Create Account</h1>
+<form th:action="@{/account/create}" method="post" th:object="${account}">
+    <label>Account Number:</label>
+    <input type="text" th:field="*{accountNumber}" required/><br/>
+
+    <label>Account Type:</label>
+    <input type="text" th:field="*{type}" required/><br/>
+
+    <label>Currency:</label>
+    <select th:field="*{currency}">
+        <option th:each="curr : ${currencies}"
+                th:value="${curr}"
+                th:text="${curr}">Currency</option>
+    </select><br/>
+
+    <label>Birthdate:</label>
+    <input type="date" th:field="*{birthDate}" required/><br/>
+
+    <button type="submit">Create</button>
+</form>
+</body>
+</html>
