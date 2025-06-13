@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Create Account</title></head>
-<body>
-<h2>No Account Found</h2>
-<p>Would you like to create one?</p>
-<a th:href="@{/account/create}"><button>Create Account</button></a>
+<head>
+    <title>Create Account</title>
+    <meta charset="UTF-8">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="text-center card shadow p-5">
+        <h2 class="mb-4 text-danger">No Account Found</h2>
+        <p class="mb-4">Would you like to create one?</p>
+        <a th:href="@{/account/create}" class="btn btn-primary">Create Account</a>
+    </div>
+</div>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

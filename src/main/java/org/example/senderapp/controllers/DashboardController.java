@@ -14,11 +14,12 @@ import java.security.Principal;
 import java.util.Optional;
 
 @Controller
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class DashboardController {
-    private final AccountRepository accountRepository;
-
-    private final UserRepository userRepository;
+    @Autowired
+    private AccountRepository accountRepository;
+    @Autowired
+    private UserRepository userRepository;
 
     @GetMapping("/dashboard")
     public String dashboard(Model model, Principal principal) {

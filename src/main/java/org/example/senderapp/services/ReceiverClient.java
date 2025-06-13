@@ -1,4 +1,4 @@
-package org.example.senderapp;
+package org.example.senderapp.services;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;

@@ -8,21 +8,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@Controller("v1/api/")
-@RequiredArgsConstructor
+@Controller
+@RequestMapping("/auth")
 public class AuthController {
-
-    private  final AuthService authService;
-
-    private final UserRepository userRepo;
-
+    @Autowired
+    private AuthService authService;
+    @Autowired
+    private UserRepository userRepo;
     @Autowired
     private PasswordEncoder passwordEncoder;
 

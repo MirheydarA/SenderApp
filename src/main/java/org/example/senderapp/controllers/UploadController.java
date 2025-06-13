@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.example.senderapp.ReceiverClient;
+import org.example.senderapp.services.ReceiverClient;
 
 @Controller
 @RequestMapping("/api/upload")
